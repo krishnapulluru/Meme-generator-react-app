@@ -1,0 +1,86 @@
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  max-width:600px;
+  padding: 0px;
+  margin: 0px;
+  font-family : 'karla' , sans-serif;
+  margin: auto;
+  border:1px solid #A626D3;
+}
+
+.bg-primary {
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+section {
+  padding: 40px;
+}
+
+header {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  height:65px;
+  justify-content:space-between;
+}
+
+header h4 {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.header--cont{
+  align-items: center;
+  display:flex;
+  color:#fff;
+}
+
+.header--cont img {
+  filter: invert(1);
+  padding-right: 10px;
+}
+
+.header--project a {
+  color:#fff;
+  border-bottom: 1px solid rgb(215, 215, 215);
+  font-size: 12px;
+}
+
+.meme-inputs{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meme-inputs input {
+  border-radius: 5px;
+  padding:10px 0;
+  border:1px solid gainsboro;
+  color:black;
+  width:49%;
+  text-indent: 5px;
+}
+
+.meme-btn{
+  padding: 10px 20px;
+  border:none;
+  border-radius: 5px;
+  width: 100%;
+  margin: 10px 0px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.meme-btn:hover{
+  opacity: .9;
+}
+
+input:focus, input:focus-visible{
+  outline: 2px solid #A626D3
+}
