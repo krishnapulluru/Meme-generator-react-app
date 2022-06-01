@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
-import Practice from "./components/Pract";
 import "./App.css";
 
 function App() {
@@ -11,8 +10,6 @@ function App() {
 			<section>
 				<Meme />
 			</section>
-
-			{/* <Practice /> */}
 		</div>
 	);
 }
