@@ -84,6 +84,10 @@ input:focus-visible {
   outline: 2px solid #A626D3
 }
 
+.meme--image {
+  position: relative;
+}
+
 .meme--image>img {
   width: 100%;
   height: auto;
@@ -91,4 +95,23 @@ input:focus-visible {
 
 .text-center {
   text-align: center;
+}
+
+.bottom--text,
+.top--text {
+  position: absolute;
+  color: white;
+  display: flex;
+  text-shadow: 2px 2px 8px black;
+  text-transform: capitalize;
+  right: 30%;
+  font-size: 48px;
+}
+
+.bottom--text {
+  bottom: 10px;
+}
+
+.top--text {
+  top: 10px;
 }
