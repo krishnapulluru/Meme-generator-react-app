@@ -32,22 +32,24 @@ export default function Meme() {
 		}
 	}
 
-	function onchnageTopContent(event) {
-		setMeme((prevObj) => {
-			return {
-				...prevObj,
-				topText: event.target.value,
-			};
-		});
-	}
-
-	function onchnageBottomContent(event) {
-		setMeme((prevObj) => {
-			return {
-				...prevObj,
-				bottomText: event.target.value,
-			};
-		});
+	function handeInput(event) {
+		console.log(meme.getRandomImage);
+		if (
+			meme.randomImage !== null &&
+			meme.randomImage !== undefined &&
+			meme.randomImage !== ""
+		) {
+			const { name, value } = event.target;
+			setMeme((preVal) => {
+				return {
+					...preVal,
+					[name]: value,
+				};
+			});
+		} else {
+			alert("Please Select Image");
+			return;
+		}
 	}
 
 	return (
@@ -56,13 +58,15 @@ export default function Meme() {
 				<input
 					type="text "
 					placeholder="Type Top Content"
+					name="topText"
 					value={meme.topText}
-					onChange={onchnageTopContent}
+					onChange={handeInput}
 				/>
 				<input
 					type="text"
+					name="bottomText"
 					placeholder="Type Bottom Content"
-					onChange={onchnageBottomContent}
+					onChange={handeInput}
 					value={meme.bottomText}
 				/>
 			</div>
