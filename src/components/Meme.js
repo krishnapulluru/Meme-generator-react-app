@@ -1,6 +1,12 @@
 import React from "react";
-import memeImage from "../data/memeData";
 export default function Meme() {
+	const [memeImage, setMemeImage] = React.useState();
+	React.useEffect(() => {
+		fetch("https://api.imgflip.com/get_memes")
+			.then((res) => res.json())
+			.then((data) => setMemeImage(data));
+	}, []);
+
 	const [meme, setMeme] = React.useState({
 		topText: "",
 		bottomText: "",
